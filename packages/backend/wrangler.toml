@@ -9,3 +9,7 @@ preview_id="KV_PREVIEW_ID"
 
 [[vars]]
 SHORT_DOMAIN="DOMAIN"
+
+[[routes]]
+pattern="www.kotoha.de5.net/*"
+zone_name="kotoha.de5.net"
