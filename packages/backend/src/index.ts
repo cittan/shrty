@@ -42,7 +42,7 @@ app.post('/api/shorten', async (c) => {
 
 })
 
-app.get('/:code', async (c) => {
+app.get('/api/:code', async (c) => {
    const code = c.req.param('code');
    const url = await c.env.KV.get(code);
    if (!url) {
