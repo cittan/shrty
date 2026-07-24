@@ -15,7 +15,7 @@ app.get('/', (c) => {
 })
 
 app.get('/api/health', (c) => {
-   return c.json({ status: 'ok', timestamp: Date.now() })
+   return c.json({ status: 'healthy', timestamp: Date.now() })
 })
 
 const shortenSchema = z.object({
