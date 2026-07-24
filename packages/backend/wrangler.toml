@@ -1,6 +1,6 @@
 name = 'shrty-backend'
 main = 'src/index.ts'
-compatiblity_date = '2026-07-23'
+compatibility_date = '2026-07-24'
 
 [[kv_namespaces]]
 binding="KV"
