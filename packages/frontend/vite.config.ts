@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'http://localhost:8787'
+        target: 'http://www.kotoha.de5.net'
       }
     }
   }
