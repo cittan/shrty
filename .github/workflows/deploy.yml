@@ -26,7 +26,6 @@ jobs:
       - run: |
           sed -i "s/KV_ID/${{ secrets.KV_ID }}/g" packages/backend/wrangler.toml
           sed -i "s/KV_PREVIEW_ID/${{ secrets.KV_PREVIEW_ID }}/g" packages/backend/wrangler.toml
-          sed -i "s|DOMAIN|${{ secrets.SHORT_DOMAIN }}|g" packages/backend/wrangler.toml
 
       - run: pnpm --filter backend exec wrangler deploy
         env:

@@ -52,8 +52,8 @@ export default function HomePage() {
 
             {shortUrl && (
                 <>
-                    <p>短链: {shortUrl}</p>
-                    <button type="button" onClick={handleCopy}>
+                    <p className="text-lg font-bold border-b-2 border-blue-500 pb-2">短链: {shortUrl}</p>
+                    <button type="button" onClick={handleCopy} className="bg-blue-500 text-white px-4 py-2 rounded-md">
                         {copied ? "已复制" : "复制短链"}
                     </button>
                 </>
