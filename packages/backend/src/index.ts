@@ -35,9 +35,13 @@ app.post('/api/shorten', async (c) => {
       return c.json({ error: url.error.issues[0]?.message || '请求参数错误' }, 400);
    }
    const validUrl = url.data.url;
+   const shortDomain = c.env.SHORT_DOMAIN;
+   if (!shortDomain) {
+      return c.json({ error: 'SHORT_DOMAIN is not configured' }, 500);
+   }
    const shortCode = nanoid(6);
    await c.env.KV.put(shortCode, validUrl);
-   const shortUrl = `https://${c.env.SHORT_DOMAIN}/${shortCode}`;
+   const shortUrl = `https://${shortDomain}/api/${shortCode}`;
    return c.json({ shortUrl });
 
 })

@@ -7,7 +7,7 @@ binding="KV"
 id="KV_ID"
 preview_id="KV_PREVIEW_ID"
 
-[[vars]]
+[vars]
 SHORT_DOMAIN="www.kotoha.de5.net"
 
 [[routes]]
