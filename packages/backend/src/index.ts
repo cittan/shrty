@@ -41,12 +41,12 @@ app.post('/api/shorten', async (c) => {
    }
    const shortCode = nanoid(6);
    await c.env.KV.put(shortCode, validUrl);
-   const shortUrl = `https://${shortDomain}/api/${shortCode}`;
+   const shortUrl = `https://${shortDomain}/${shortCode}`;
    return c.json({ shortUrl });
 
 })
 
-app.get('/api/:code', async (c) => {
+app.get('/:code', async (c) => {
    const code = c.req.param('code');
    const url = await c.env.KV.get(code);
    if (!url) {

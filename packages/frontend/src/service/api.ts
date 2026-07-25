@@ -2,7 +2,7 @@
 
 export async function shortenUrl(url: string) {
     const res = await fetch(
-        '/api/shorten',
+        'https://s.kotoha.de5.net/api/shorten',
         {
             method: 'POST',
             headers: {

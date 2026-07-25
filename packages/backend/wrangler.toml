@@ -8,8 +8,8 @@ id="KV_ID"
 preview_id="KV_PREVIEW_ID"
 
 [vars]
-SHORT_DOMAIN="www.kotoha.de5.net"
+SHORT_DOMAIN="s.kotoha.de5.net"
 
 [[routes]]
-pattern="www.kotoha.de5.net/api/*"
-zone_name="kotoha.de5.net"
+pattern="s.kotoha.de5.net"
+custom_domain=true
